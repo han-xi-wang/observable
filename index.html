@@ -17,11 +17,6 @@ a:link:not(:hover) {
 
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/d/ca83aba5d1fc094c.js?v=4&api_key=dea0c5373eb5b5dd57fae0d24f8f825c1977efe0";
-
-new Runtime().module(define, name => {
-  if (name === "chart") {
-    return new Inspector(document.querySelector("#chart"));
-  }
-});
+import define from "https://api.observablehq.com/d/ca83aba5d1fc094c.js?v=4";
+new Runtime().module(define, Inspector.into("#observablehq-cfe751ee"));
 </script>
