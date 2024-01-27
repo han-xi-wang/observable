@@ -22,5 +22,9 @@ a:link:not(:hover) {
 <script type="module">
 import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
 import define from "https://api.observablehq.com/d/ca83aba5d1fc094c.js?v=4";
-new Runtime().module(define, Inspector.into("#observablehq-cfe751ee"));
+new Runtime().module(define, name => {
+  if (name === "chart") {
+    return new Inspector(document.querySelector("#chart));
+                                                }
+});
 </script>
