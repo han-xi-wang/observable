@@ -24,4 +24,17 @@ import define from "https://api.observablehq.com/d/a4feb8b518b0da9a.js?v=4&api_k
 new Runtime().module(define, name => {
   if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-67201ecd"));
 });
+    
+main.redefine("width", library.Generators.observe(notify => {
+  let width = notify(chart.clientWidth); // initial width
+  function resized() {
+    let newWidth = chart.clientWidth;
+    if (newWidth !== width) {
+      notify(width = newWidth);
+    }
+  }
+  addEventListener("resize", resized);
+  return () => removeEventListener("resize", resized);
+}));
+    
 </script>
