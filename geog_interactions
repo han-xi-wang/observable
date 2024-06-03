@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.container {
+  position: relative;
+}
+
+.map-box {
+  position: relative;
+  height: 100%;
+  margin: 0px auto;
+}
+
+.bar-chart-box {
+  position: absolute;
+  background: lightgray;
+  height: 150px;  
+  width: 70%;
+  left: 50px;
+  top: 50px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="map-box">
+    <div id="observablehq-viewof-ij-4db7c16f"></div>
+    <div id="observablehq-viewof-k-4db7c16f"></div>
+    <div id="observablehq-viewof-mapRotateX-4db7c16f"></div>
+    <div id="observablehq-viewof-select-4db7c16f"></div>
+    <div id="observablehq-map2-4db7c16f"></div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+      import define from "https://api.observablehq.com/d/4c7e57700745fef4.js?v=4";
+      new Runtime().module(define, name => {
+        if (name === "viewof ij") return new Inspector(document.querySelector("#observablehq-viewof-ij-4db7c16f"));
+        if (name === "viewof k") return new Inspector(document.querySelector("#observablehq-viewof-k-4db7c16f"));
+        if (name === "viewof mapRotateX") return new Inspector(document.querySelector("#observablehq-viewof-mapRotateX-4db7c16f"));
+        if (name === "viewof select") return new Inspector(document.querySelector("#observablehq-viewof-select-4db7c16f"));
+        if (name === "map2") return new Inspector(document.querySelector("#observablehq-map2-4db7c16f"));
+        return ["CKlinks2","selectLinks","mycountry","drawChart","chart"].includes(name);
+      });
+    </script>
+  </div>
+  <div class="bar-chart-box">
+    <div id="observablehq-chart-4db7c16f"></div>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+      <script type="module">
+        import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+        import define from "https://api.observablehq.com/d/4c7e57700745fef4.js?v=4";
+        new Runtime().module(define, name => {
+          if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-4db7c16f"));
+        });
+      </script>
+    </div>
+  </div>
+</body>
+</html>
