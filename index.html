@@ -6,22 +6,34 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 
-body {
-	position: relative;
-  	margin: 0px auto;
-  	padding: 10px;
-  	font-family: Arial Black, sans-serif;
-	background-color: black;
+.grid-container {
+  display: grid;
+  row-gap: 10px;
+  grid-template-columns: auto auto;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+p {
+font-size:15px;
 }
 
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body>
-	<a href="discourse_network.html"><i class="material-icons" style="font-size:200px;">textsms</i></a>
-	<a href="social_networks.html"><i class="material-icons" style="font-size:200px;">people_outline</i></a>
-	<a href="geog_interactions.html"><i class="material-icons" style="font-size:200px;">public</i></a>
-	<a href="geographic_influence.html"><i class="material-icons" style="font-size:200px;">pie_chart_outlined</i></a>
-
+	<div class="grid-container">
+  		<div class="grid-item"><a href="discourse_network.html"><i class="material-icons" style="font-size:50px;">textsms</i><p>discourse network</p></a></div>
+  		<div class="grid-item"><a href="social_networks.html"><i class="material-icons" style="font-size:50px;">people_outline</i><p>social network</p></a></div>
+  		<div class="grid-item"><a href="geog_interactions.html"><i class="material-icons" style="font-size:50px;">public</i><p>geographic interactions</p></a></div>  
+  		<div class="grid-item"><a href="geographic_influence.html"><i class="material-icons" style="font-size:50px;">pie_chart_outlined</i><p>geographic distribution</p></a></div> 
+	</div>
 </body>
 </html>
