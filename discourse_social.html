@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .menu-box {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    display: grid;
+    grid-template-columns: auto;
+  }
+  .tooltip {
+    background: rgba(255,255,255,0.25);
+    font-family: sans-serif;
+    width: 400px;
+    height: 100%;
+    padding: 25px;
+  }
+  p {
+    margin-left: 25px;
+  }
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #262626; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #7d7d7d; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #fff; 
+}
+
+a:link {
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+}
+a:visited {
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+}
+a:hover {
+	color: red;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body style="background-color:black;">
+
+<div id="observablehq-chart-5c9b11f9"></div>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/ddff4d6be212c3b5.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-5c9b11f9"));
+});
+</script>
+  
+<div id="observablehq-chart-5c9b11f9" style="width: 100%;"></div>
+  <div class="menu-box">
+    <a href="index.html"><i class="material-icons" style="font-size:120px;">menu</i></a>
+    <a href="discourse_network.html"><i class="material-icons" style="font-size:120px;">forum</i></a>
+  </div>
+  <script type="module">
+    import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+    import define from "https://api.observablehq.com/d/ddff4d6be212c3b5.js?v=4";
+    new Runtime().module(define, name => {
+      if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-5c9b11f9"));
+    });
+  </script>
+</body>
+</html>
