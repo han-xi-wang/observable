@@ -9,7 +9,7 @@
 .map-box {
   position: relative;
   margin-left: 100px;
-  margin-top: 150px;
+  margin-top: 80px;
   margin-bottom: 60px;
   height: 60%;
 }
@@ -19,7 +19,14 @@
   height: 600px;  
   width: 600px;
   left: 0px;
-  top: -150px;
+  top: -80px;
+}
+.controls-box {
+  position: absolute;
+  height: 100px;
+  width: 300px;
+  right: 0px;
+  top: -80px;
 }
 
 </style>
@@ -28,12 +35,12 @@
 
 <div class="container">
   <div class="map-box" id="observablehq-map2-4db7c16f"></div>
-  <div class="bar-chart-box">
+  <div class="bar-chart-box" id="observablehq-chart-4db7c16f"></div>
+  <div class="controls-box">
     <div id="observablehq-viewof-ij-4db7c16f"></div>
     <div id="observablehq-viewof-k-4db7c16f"></div>
     <div id="observablehq-viewof-mapRotateX-4db7c16f"></div>
     <div id="observablehq-viewof-select-4db7c16f"></div>
-    <div id="observablehq-chart-4db7c16f"></div>
   </div>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
