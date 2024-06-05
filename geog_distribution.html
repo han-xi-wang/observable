@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  font-family: arial, sans-serif;
+}
+.container {
+  position: relative;
+}
+
+.map-box {
+  position: relative;
+  margin-left: 0px;
+  margin-top: 80px;
+  margin-bottom: 60px;
+  height: 60%;
+}
+
+.bar-chart-box {
+  position: absolute;
+  left: 0px;
+  top: -80px;
+}
+.controls-box {
+  position: absolute;
+  background: black;
+  color: red;
+  height: 110px;
+  width: 350px;
+  right: 0px;
+  bottom: 0px;
+  padding: 10px;
+}
+
+.menu-box {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  display: grid;
+  grid-template-columns: auto;
+}
+
+a:link {
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+}
+a:visited {
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+}
+a:hover {
+	color: red;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+  
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body>
+
+<div class="container">
+  <div class="map-box">
+    <div id="observablehq-map2-6d3ecfe9" style=" width: 800px; margin: 0px auto;"></div>
+  </div>
+  <div class="menu-box">
+    <a href="index.html"><i class="material-icons" style="font-size:120px;">menu</i></a>
+    <a href="geog_interactions.html"><i class="material-icons" style="font-size:120px;">call_split</i></a>
+  </div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+    <script type="module">
+      import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+      import define from "https://api.observablehq.com/d/77676c72e57f97db.js?v=4";
+      new Runtime().module(define, name => {
+        if (name === "map2") return new Inspector(document.querySelector("#observablehq-map2-6d3ecfe9"));
+      });
+    </script>
+  </div>
+
+</body>
+</html>
