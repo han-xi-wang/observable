@@ -61,16 +61,18 @@ a:hover {
 </style>
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
+
 <body>
 
 <div class="container">
   <div class="map-box">
-    <div id="observablehq-map2-ddc46429" style=" width: 800px; margin: 0px auto;"></div>
+    <div id="observablehq-map2-a8a77de7" style=" width: 800px; margin: 0px auto;"></div>
   </div>
+<div class="bar-chart-box" id="observablehq-chart-a8a77de7"></div>
 <div class="controls-box">
-	<div id="observablehq-viewof-radios-ddc46429" style=" width: 225px"></div>
+	<div id="observablehq-viewof-radios-a8a77de7" style=" width: 225px"></div>
 	<p> </p>
-	<div id="observablehq-viewof-mapRotateX-ddc46429"></div>
+	<div id="observablehq-viewof-mapRotateX-a8a77de7"></div>
   </div>
   <div class="menu-box">
     <a href="index.html"><i class="material-icons" style="font-size:120px;">menu</i></a>
@@ -80,13 +82,14 @@ a:hover {
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
     <script type="module">
       import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-      import define from "https://api.observablehq.com/d/77676c72e57f97db@1602.js?v=4";
-      new Runtime().module(define, name => {
-        if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-ddc46429"));
-  	if (name === "viewof mapRotateX") return new Inspector(document.querySelector("#observablehq-viewof-mapRotateX-ddc46429"));
-  	if (name === "map2") return new Inspector(document.querySelector("#observablehq-map2-ddc46429"));
-	return ["SelectedData","SelectedColor","SelectedK"].includes(name);
-      });
+      import define from "https://api.observablehq.com/d/77676c72e57f97db@1616.js?v=4";
+	new Runtime().module(define, name => {
+  	if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-a8a77de7"));
+  	if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-a8a77de7"));
+  	if (name === "viewof mapRotateX") return new Inspector(document.querySelector("#observablehq-viewof-mapRotateX-a8a77de7"));
+  	if (name === "map2") return new Inspector(document.querySelector("#observablehq-map2-a8a77de7"));
+  	return ["SelectedData","SelectedColor","SelectedK"].includes(name);
+});
     </script>
   </div>
 
