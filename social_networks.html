@@ -15,8 +15,8 @@
   color: red;
   height: 80px;
   width: 275px;
-  right: 0px;
-  bottom: 0px;
+  right: 20px;
+  bottom: 20px;
   padding: 10px;
 }
   .tooltip {
@@ -71,22 +71,22 @@ a:hover {
 </head>
   
 <body style="background-color:black">
-<div id="observablehq-chart-685a708b" style="width: 100%;"></div>
+<div id="observablehq-chart-321bed7c" style="width: 100%;"></div>
 <div class="menu-box" style="height: 400px">
 	<a href="index.html"><i class="material-icons" style="font-size:120px;">menu</i></a>
 	<a href="geog_interactions.html"><i class="material-icons" style="font-size:120px;">supervised_user_circle</i></a>
 	<a href="discourse_social.html"><i class="material-icons" style="font-size:120px;">tag</i></a>
 </div>
 <div class="controls-box" style="width: 225px">
-	<div id="observablehq-viewof-radios-685a708b"></div>
+	<div id="observablehq-viewof-radios-321bed7c"></div>
 </div>
 
 <script type="module">
 	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-	import define from "https://api.observablehq.com/d/1412ff4ae072ee5b@461.js?v=4";
+	import define from "https://api.observablehq.com/d/1412ff4ae072ee5b@487.js?v=4";
 	new Runtime().module(define, name => {
-  		if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-685a708b"));
-  		if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-685a708b"));
+  		if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-321bed7c"));
+  		if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-321bed7c"));
 	});
 </script>
 </body>
