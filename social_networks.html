@@ -90,18 +90,3 @@ a:hover {
 	});
 </script>
 </body>
-
-<div id="observablehq-viewof-radios-81301177"></div>
-<div id="observablehq-chart-81301177"></div>
-<p>Credit: <a href="https://observablehq.com/d/1412ff4ae072ee5b@542">Force-directed graph by Hanxi Wang&#039;s Workspace</a></p>
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
-<script type="module">
-import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-import define from "https://api.observablehq.com/d/1412ff4ae072ee5b@542.js?v=4";
-new Runtime().module(define, name => {
-  if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-81301177"));
-  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-81301177"));
-  return ["selectedData","HBNodes","HBLinks","HBData"].includes(name);
-});
-</script>
