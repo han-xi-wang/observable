@@ -70,23 +70,25 @@ a:hover {
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
   
-<body style="background-color:white">
-<div id="observablehq-chart-81301177" style="width: 100%;"></div>
+<body style="background-color:black">
+<div id="observablehq-chart-5f9f9394" style="width: 100%;"></div>
 <div class="menu-box" style="height: 400px">
 	<a href="index.html"><i class="material-icons" style="font-size:120px;">menu</i></a>
 	<a href="geog_interactions.html"><i class="material-icons" style="font-size:120px;">supervised_user_circle</i></a>
 	<a href="discourse_social.html"><i class="material-icons" style="font-size:120px;">tag</i></a>
 </div>
 <div class="controls-box" style="width: 225px">
-	<div id="observablehq-viewof-radios-81301177"></div>
+	<div id="observablehq-viewof-radios-5f9f9394"></div>
+	<div id="observablehq-viewof-level-5f9f9394"></div>
 </div>
 
 <script type="module">
 	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
 	import define from "https://api.observablehq.com/d/1412ff4ae072ee5b.js?v=4";
 	new Runtime().module(define, name => {
-  		if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-81301177"));
-  		if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-81301177"));
+  		if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-5f9f9394"));
+		if (name === "viewof level") return new Inspector(document.querySelector("#observablehq-viewof-level-5f9f9394"));
+  		if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-5f9f9394"));
 	});
 </script>
 </body>
