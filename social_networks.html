@@ -71,22 +71,37 @@ a:hover {
 </head>
   
 <body style="background-color:black">
-<div id="observablehq-chart-843feea6" style="width: 100%;"></div>
+<div id="observablehq-chart-81301177" style="width: 100%;"></div>
 <div class="menu-box" style="height: 400px">
 	<a href="index.html"><i class="material-icons" style="font-size:120px;">menu</i></a>
 	<a href="geog_interactions.html"><i class="material-icons" style="font-size:120px;">supervised_user_circle</i></a>
 	<a href="discourse_social.html"><i class="material-icons" style="font-size:120px;">tag</i></a>
 </div>
 <div class="controls-box" style="width: 225px">
-	<div id="observablehq-viewof-radios-843feea6"></div>
+	<div id="observablehq-viewof-radios-81301177"></div>
 </div>
 
 <script type="module">
 	import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
-	import define from "https://api.observablehq.com/d/1412ff4ae072ee5b@490.js?v=4";
+	import define from "https://api.observablehq.com/d/1412ff4ae072ee5b.js?v=4";
 	new Runtime().module(define, name => {
-  		if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-843feea6"));
-  		if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-843feea6"));
+  		if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-81301177"));
+  		if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-81301177"));
 	});
 </script>
 </body>
+
+<div id="observablehq-viewof-radios-81301177"></div>
+<div id="observablehq-chart-81301177"></div>
+<p>Credit: <a href="https://observablehq.com/d/1412ff4ae072ee5b@542">Force-directed graph by Hanxi Wang&#039;s Workspace</a></p>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@observablehq/inspector@5/dist/inspector.css">
+<script type="module">
+import {Runtime, Inspector} from "https://cdn.jsdelivr.net/npm/@observablehq/runtime@5/dist/runtime.js";
+import define from "https://api.observablehq.com/d/1412ff4ae072ee5b@542.js?v=4";
+new Runtime().module(define, name => {
+  if (name === "viewof radios") return new Inspector(document.querySelector("#observablehq-viewof-radios-81301177"));
+  if (name === "chart") return new Inspector(document.querySelector("#observablehq-chart-81301177"));
+  return ["selectedData","HBNodes","HBLinks","HBData"].includes(name);
+});
+</script>
